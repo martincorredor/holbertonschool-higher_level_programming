@@ -1,23 +1,20 @@
 #!/usr/bin/python3
 """
 Module 1-square
-This module contain the Square class
+Define class Square
 """
 
 
 class Square:
     """
-    Defines a square
-    
+    Define a square
     Args:
-        size : Side of the square
+        size : Side of a square
     """
     def __init__(self, size):
         """
-        Initializes the square
-        
+        Initializes square
         Atributes:
-                size : Side of the square
+                 size : Side of a square
         """
         self.__size = size
-    
