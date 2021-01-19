@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 6
+Module6
 Contain a BaseGeometry class
 """
 
