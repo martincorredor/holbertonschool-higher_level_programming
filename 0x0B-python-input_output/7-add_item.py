@@ -1,18 +1,10 @@
 #!/usr/bin/python3
-"""Module "7-add_item.py"""
-import json
-import sys
+"""Module 9-add_item"""
 
 
-def save_to_json_file(my_obj, filename):
-    """writes an Object to a text file, using a JSON representation"""
-    with open(filename, "w") as f:
-        return json.dump(my_obj, f)
-
-def load_from_json_file(filename):
-    """creates an Object from a JSON file"""
-    with open(filename, "r") as f:
-        return json.load(f)
+from sys import argv
+save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
