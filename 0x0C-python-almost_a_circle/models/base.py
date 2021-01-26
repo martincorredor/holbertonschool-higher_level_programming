@@ -47,4 +47,25 @@ class Base:
         if json_string is None or json_string == 0:
             json_string = "[]"
         return json.loads(json_string)
+    
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        This method creates a "dummy" instance and updates the
+        value of the attributes with those of the given dictionary
+        and returns a new object with all attributes already set.
+        """
+        from models.rectangle import Rectangle
+        from models.square import Square
 
+        if cls is Rectangle:
+            obj_dummy = Rectangle(26, 19)
+
+        elif cls is Square:
+            obj_dummy = Square(31)
+
+        else:
+            obj_dummy = None
+
+        obj_dummy.update(**dictionary)
+        return obj_dummy
