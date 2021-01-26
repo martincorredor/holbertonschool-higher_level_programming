@@ -78,7 +78,7 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kargs):
         """Assigns an argument to each attribute"""
         if args:
             i = len(args)
