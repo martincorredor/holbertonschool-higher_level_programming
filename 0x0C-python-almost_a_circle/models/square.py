@@ -50,3 +50,15 @@ class Square(Rectangle):
                 self.x = kargs["x"]
             if "y" in kargs:
                 self.y = kargs["y"]
+
+    def to_dictionary(self):
+        """
+        Return a dict representation of this class
+        """
+        dic = {
+                "id": self.id,
+                "size": self.size,
+                "x": self.x,
+                "y": self.y
+                }
+        return dic
