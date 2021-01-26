@@ -1,4 +1,3 @@
-guillaume@ubuntu:~/$ cat 10-main.py
 #!/usr/bin/python3
 """ 10-main """
 from models.square import Square
