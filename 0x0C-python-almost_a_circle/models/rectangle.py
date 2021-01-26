@@ -61,6 +61,12 @@ class Rectangle(Base):
         """Returns area of the rectangle"""
         return self.__width * self.__height
 
+    def __str__(self):
+        """Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return "[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+            self.__class__.__name__, self.id, self.__x, self.__y,
+            self.__width, self.__height)
+
     def display(self):
         """Prints the rectangle instance with # character"""
         for i in range(self.__y):
@@ -72,10 +78,30 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def __str__(self):
-        """Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return "[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
-            self.__class__.__name__, self.id, self.__x, self.__y,
-            self.__width, self.__height)
+    def update(self, *args):
+        """Assigns an argument to each attribute"""
+        if args:
+            i = len(args)
+            if 0 in range(i):
+                self.id = args[0]
+            if 1 in range(i):
+                self.__width = args[1]
+            if 2 in range(i):
+                self.__height = args[2]
+            if 3 in range(i):
+                self.__x = args[3]
+            if 4 in range(i):
+                self.__y = args[4]
+        else:
+            if "id" in kargs:
+                self.id = kargs["id"]
+            if "width" in kargs:
+                self.__width = kargs["width"]
+            if "height" in kargs:
+                self.__height = kargs["height"]
+            if "x" in kargs:
+                self.__x = kargs["x"]
+            if "y" in kargs:
+                self.__y = ["y"]
 
-
+    
