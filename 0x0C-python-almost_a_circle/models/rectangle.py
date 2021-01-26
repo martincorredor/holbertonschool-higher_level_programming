@@ -78,30 +78,32 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args, **kargs):
-        """Assigns an argument to each attribute"""
+    def update(self, *args, **kwargs):
+        """
+        If args: set attributes in this order: id, width, height, x, y
+        If no args given: set attributes according to kwargs
+        """
         if args:
-            i = len(args)
-            if 0 in range(i):
-                self.id = args[0]
-            if 1 in range(i):
-                self.__width = args[1]
-            if 2 in range(i):
-                self.__height = args[2]
-            if 3 in range(i):
-                self.__x = args[3]
-            if 4 in range(i):
-                self.__y = args[4]
+            for k, v in enumerate(args):
+                if k == 0:
+                    self.id = v
+                elif k == 1:
+                    self.width = v
+                elif k == 2:
+                    self.height = v
+                elif k == 3:
+                    self.x = v
+                else:
+                    self.y = v
         else:
-            if "id" in kargs:
-                self.id = kargs["id"]
-            if "width" in kargs:
-                self.__width = kargs["width"]
-            if "height" in kargs:
-                self.__height = kargs["height"]
-            if "x" in kargs:
-                self.__x = kargs["x"]
-            if "y" in kargs:
-                self.__y = ["y"]
-
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
     
