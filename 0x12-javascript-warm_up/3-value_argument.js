@@ -1,8 +1,8 @@
 #!/usr/bin/node
-// prints the first argument passed to it.
-
-if (process.argv[2]) {
-  console.log(process.argv[2]);
+// prints the first argument passed to it
+const count = process.argv;
+if (count[2]) {
+  console.log(count[2]);
 } else {
-  console.log("No argument");
+  console.log('No argument');
 }
