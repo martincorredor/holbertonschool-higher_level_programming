@@ -1,6 +1,6 @@
 #!/usr/bin/node
-// loop an array and print the items
-const MyVar = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-for (i in MyVar) {
-  console.log(MyVar[i]);
+// Loop an array and print the items
+const myVar = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+for (i in myVar) {
+  console.log(myVar[i]);
 }
