@@ -1,4 +1,5 @@
 #!/usr/bin/node
-//prints two arguments passed to it with "is" between.
-
-console.log(`${process.argv[2]} is ${process.argv[3]}`);
+// prints two arguments passed to it with "is" between.
+const firstArg = process.argv[2];
+const secondArg = process.argv[3];
+console.log(`${firstArg} is ${secondArg}`);
