@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-''' This module lists all states from the database hbtn_0e_0_usa '''
+"""Lists all states from hbtn_0e_0_usa"""
 
-from sys import argv
 import MySQLdb
+from sys import argv
 
 if __name__ = "__main__":
     # Estableciendo la conexion
     # Los argumentos se reciben de la linea de comandos
-    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-                         passwd=argv[2], db=argv[3])
+    db = MySQLdb.connect(host="localhost", port=3306, charset="utf8",
+                         user=argv[1], passwd=argv[2], db=argv[3])
 
     # Creando un objeto "cursor" con la función cursor()
     # Este método permite usar otras funciones integradas
